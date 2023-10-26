@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.round{
+    border-radius: 50%;
+}
