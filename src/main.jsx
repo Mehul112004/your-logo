@@ -13,7 +13,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import User from "./Components/User/User";
-import Github,{githubInfo} from "./Github/Github";
+import Github,{githubInfo} from "./Components/Github/Github";
 
 /*const router = createBrowserRouter([
   {
@@ -34,6 +34,7 @@ import Github,{githubInfo} from "./Github/Github";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    <>
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home/>}></Route>
       <Route path="about" element={<About />}></Route>
@@ -44,6 +45,12 @@ const router = createBrowserRouter(
        path="github" 
        element={<Github/>}></Route>
     </Route>
+
+    <Route path="/" element={<Home/>}></Route>
+    <Route path="about" element={<About />}></Route>
+    <Route path="contact" element={<Contact />}></Route>
+    <Route path="user/:id" element={<User />}></Route>
+    </>
   )
 );
 
