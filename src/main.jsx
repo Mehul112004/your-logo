@@ -46,10 +46,8 @@ const router = createBrowserRouter(
        element={<Github/>}></Route>
     </Route>
 
-    <Route path="/" element={<Home/>}></Route>
-    <Route path="about" element={<About />}></Route>
-    <Route path="contact" element={<Contact />}></Route>
-    <Route path="user/:id" element={<User />}></Route>
+    <Route path="/about" element={<About />}></Route>
+    <Route path="/contact" element={<Contact />}></Route>
     </>
   )
 );
