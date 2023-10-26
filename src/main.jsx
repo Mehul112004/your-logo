@@ -34,7 +34,6 @@ import Github,{githubInfo} from "./Components/Github/Github";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <>
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home/>}></Route>
       <Route path="about" element={<About />}></Route>
@@ -45,10 +44,12 @@ const router = createBrowserRouter(
        path="github" 
        element={<Github/>}></Route>
     </Route>
-
-    <Route path="/about" element={<About />}></Route>
-    <Route path="/contact" element={<Contact />}></Route>
-    </>
+  ),
+  createRoutesFromElements(
+    <Route path="/contact" element={<Contact/>}></Route>
+  ),
+  createRoutesFromElements(
+    <Route path="/about" element={<About/>}></Route>
   )
 );
 
